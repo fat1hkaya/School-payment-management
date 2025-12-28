@@ -6,7 +6,7 @@ public class Student{
     private int feesPaid;
     private int feesTotal;
 
-    public Student(int id,String name,int grade, int feesPaid,int feesTotal) {
+    public Student(int id,String name,int grade) {
 
         this.id = id;
         this.name = name;
@@ -29,6 +29,10 @@ public class Student{
 
     public int getGrade(){
         return grade;
+    }
+    public void paysFees(int fees){
+        this.feesPaid += fees;
+        School.updateTotalMoneyEarned(fees);
     }
 
 }
