@@ -24,7 +24,19 @@ public class Main {
 
         School school = new School(teacherList,studentList);
         ali.paysFees(60000);
-        System.out.println("School was earned "+school.getTotalMoneyEarned());
+        veli.paysFees(50000);
+        Teacher mine = new Teacher(4,"Mine",70000);
+        school.addTeacher(mine);
+        System.out.println("School was earned "+school.getTotalMoneyEarned()+" TL");
+
+        System.out.println("--------School's Pay Salary ----------");
+        fatma.receiveSalary(fatma.getSalary());
+        System.out.println("School spent for salary to "+fatma.getName()+" and now has "+school.getTotalMoneyEarned()+" TL");
+        mehmet.receiveSalary(mehmet.getSalary());
+        System.out.println("School spent for salary to "+mehmet.getName()+" and now has "+school.getTotalMoneyEarned()+" TL");
+        ahmet.receiveSalary(ahmet.getSalary());
+        System.out.println("School spent for salary to "+ahmet.getName()+" and now has "+school.getTotalMoneyEarned()+" TL");
+
 
     }
 }
